@@ -1,4 +1,4 @@
-# NOde开发的学生管理系统
+# Node开发的学生管理系统
 `技术栈: Node+express+MongoDB+mongoose+bootstrap+JQuery`
 
 ### 项目启动
