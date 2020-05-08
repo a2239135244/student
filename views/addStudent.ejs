@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075) -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no"
+        name="viewport">
+    <title>学生信息</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/ionicons.min.css">
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css">
+
+    <link rel="stylesheet" href="/css/summernote-lite.css">
+    <link rel="stylesheet" href="/css/flag-icon.min.css">
+    <link rel="stylesheet" href="/css/demo.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <style type="text/css">
+        /* Chart.js */
+        @-webkit-keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .chartjs-render-monitor {
+            -webkit-animation: chartjs-render-animation 0.001s;
+            animation: chartjs-render-animation 0.001s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="adcenter">
+        <link type="text/css" rel="stylesheet" href="/css/astyle.css">
+        <div align="center">
+            <a href="\" rel="nofollow" target="_blank"><img src="" alt="" border="0"></a>
+        </div>
+    </div>
+    <div id="app">
+        <div class="main-wrapper">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar">
+                <form class="form-inline mr-auto" onsubmit="return false">
+                    <ul class="navbar-nav mr-3">
+                        <li>
+                            <a href="" data-toggle="sidebar" class="nav-link nav-link-lg">
+                                <i class="ion ion-navicon-round"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" data-toggle="search" class="nav-link nav-link-lg d-sm-none">
+                                <i class="ion ion-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="search-element">
+                        <input class="form-control" id="search" type="search" placeholder="Search" aria-label="Search"
+                            list="dataList">
+                        <button class="btn" type="submit" id="searchBtn"><i class="ion ion-search"></i></button>
+                        <datalist id="dataList">
+
+                        </datalist>
+                    </div>
+                </form>
+                <ul class="navbar-nav navbar-right">
+                    <li class="dropdown dropdown-list-toggle">
+                        <a href="" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep">
+                            <i class="ion ion-ios-bell-outline"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-list dropdown-menu-right">
+                            <div class="dropdown-header">Notifications
+                                <div class="float-right">
+                                    <a href="">View All</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-list-content">
+                                <a href="" class="dropdown-item dropdown-item-unread">
+                                    <img alt="image" src="/image/avatar-1.jpeg"
+                                        class="rounded-circle dropdown-item-img">
+                                    <div class="dropdown-item-desc">
+                                        <b>Kusnaedi</b> has moved task <b>Fix bug header</b> to <b>Done</b>
+                                        <div class="time">10 Hours Ago</div>
+                                    </div>
+                                </a>
+                                <a href="" class="dropdown-item dropdown-item-unread">
+                                    <img alt="image" src="/image/avatar-2.jpeg"
+                                        class="rounded-circle dropdown-item-img">
+                                    <div class="dropdown-item-desc">
+                                        <b>Ujang Maman</b> has moved task <b>Fix bug footer</b> to <b>Progress</b>
+                                        <div class="time">12 Hours Ago</div>
+                                    </div>
+                                </a>
+                                <a href="" class="dropdown-item">
+                                    <img alt="image" src="/image/avatar-3.jpeg"
+                                        class="rounded-circle dropdown-item-img">
+                                    <div class="dropdown-item-desc">
+                                        <b>Agung Ardiansyah</b> has moved task <b>Fix bug sidebar</b> to <b>Done</b>
+                                        <div class="time">12 Hours Ago</div>
+                                    </div>
+                                </a>
+                                <a href="" class="dropdown-item">
+                                    <img alt="image" src="/image/avatar-4.jpeg"
+                                        class="rounded-circle dropdown-item-img">
+                                    <div class="dropdown-item-desc">
+                                        <b>Ardian Rahardiansyah</b> has moved task <b>Fix bug navbar</b> to <b>Done</b>
+                                        <div class="time">16 Hours Ago</div>
+                                    </div>
+                                </a>
+                                <a href="" class="dropdown-item">
+                                    <img alt="image" src="/image/avatar-5.jpeg"
+                                        class="rounded-circle dropdown-item-img">
+                                    <div class="dropdown-item-desc">
+                                        <b>Alfa Zulkarnain</b> has moved task <b>Add logo</b> to <b>Done</b>
+                                        <div class="time">Yesterday</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown"><a href="" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg">
+                            <i class="ion ion-android-person d-lg-none"></i>
+                            <!-- username -->
+                            <div class="d-sm-none d-lg-inline-block">Hi, <%= adminData.username %></div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="/Logout" class="dropdown-item has-icon">
+                                <i class="ion ion-android-person"></i> Profile
+                            </a>
+                            <a onclick="confirm('确认退出？')" href="" class="dropdown-item has-icon">
+                                <i class="ion ion-log-out"></i> Logout
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <!-- -号 是不转译HTML 代码  = 是转译 -->
+            <%- include('./header.ejs',{idx:'addStudent'}) %>
+            <div class="main-content" style="min-height: 868px;">
+                <section class="section">
+                    <h1 class="section-header">
+                        <div>学生信息</div>
+                    </h1>
+
+                    <!-- <form class="form-horizontal" onclick="return false"> -->
+                    <div class="form-group">
+                        <label for="firstname" class="col-sm-2 control-label">名字</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="" placeholder="请输入名字">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-sm-2 control-label">性别</label>
+                        <div class="col-sm-10 radio-inline">
+                            <label for="nan">
+                                <input type="radio" name="sex" id="nan" checked value="男">男
+                            </label>
+                            <label for="nv">
+                                <input type="radio" name="sex" id="nv" value="女">女
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-sm-2 control-label">年龄</label>
+                        <div class="col-sm-10">
+                            <input type="number" min="0" max="50" class="form-control" id="" placeholder="请输入年龄">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btnSave btn-success">保存</button>
+                            <button type="submit" class="btn btn-info" onclick="history.go(-1)">返回</button>
+
+                        </div>
+                    </div>
+                    <!-- </form> -->
+
+                </section>
+            </div>
+            <%- include('./footer.ejs') %>
+        </div>
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.js"></script>
+    <script src="/js/tooltip.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.nicescroll.min.js"></script>
+    <script src="/js/scroll-up-bar.min.js"></script>
+    <script src="/js/sa-functions.js"></script>
+    <script src="/js/summernote-lite.js"></script>
+    <script src="/js/scripts.js"></script>
+    <script src="/js/custom.js"></script>
+    <script>
+        $(function () {
+            $(".btnSave").on('click', function () {
+                let _name = $("input[type=text]").val()
+                let _sex = $('input[type=radio]:checked').val()
+                let _age = $("input[type=number]").val()
+                if (_age < 5 || _age > 50) {
+                    alert("请输入规范年龄")
+                    return
+                }
+                $.ajax({
+                    url: "/student/addStudent",
+                    type: 'put',
+                    data: {
+                        name: _name,
+                        sex: _sex,
+                        age: _age
+                    }, success(res) {
+                        console.log(res)
+                        alert(res.msg)
+                    }
+                })
+                console.log(_name, _age, _sex)
+            })
+        })
+    </script>

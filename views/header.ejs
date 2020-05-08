@@ -1,0 +1,69 @@
+<div class="main-sidebar" tabindex="1" style="overflow: hidden; outline: none;">
+    <aside id="sidebar-wrapper">
+        <div class="sidebar-brand">
+            <a href="">Stisla Lite</a>
+        </div>
+        <div class="sidebar-user">
+            <div class="sidebar-user-picture">
+                <img alt="image" src="/image/avatar-1.jpeg">
+            </div>
+            <div class="sidebar-user-details">
+
+                <!-- username -->
+                <div class="user-name">username</div>
+                <!-- 上一次登录的时间 -->
+                <div class="user-role">
+                    <%= new Date(adminData.lastLoginTime).toLocaleString() %>
+                </div>
+            </div>
+        </div>
+        <ul class="sidebar-menu">
+            <li class="<%= idx=='index'?'active':''%>">
+                <a href="/">
+                    <i class="ion ion-speedometer"></i>
+                    <span>学生管理</span>
+                </a>
+            </li>
+            <li class="<%= idx=='addStudent'?'active':''%>">
+                <a href="/student/addStudent">
+                    <i class="ion ion-clipboard"></i>
+                    <span>增加学生</span>
+                </a>
+            </li>
+            <li class="<%= idx=='admin'?'active':''%>">
+                <a href="">
+                    <i class="ion ion-ios-albums-outline"></i>
+                    <span>管理员管理</span>
+                </a>
+            </li>
+            <li class="<%= idx=='adminStudent'?'active':''%>">
+                <a href="">
+                    <i class="ion ion-flag"></i>
+                    <span>增加管理员</span>
+                </a>
+            </li>
+
+            <!-- <li>
+          <a href="">
+            <i class="ion ion-stats-bars"></i>
+            <span>退出登录</span>
+          </a>
+        </li> -->
+            <!-- <li>
+          <a href="">
+            <i class="ion ion-ios-location-outline"></i>
+            <span>Google Maps</span>
+          </a>
+        </li> -->
+
+
+        </ul>
+        <div class="p-3 mt-4 mb-4">
+            <a onclick="return confirm('确认退出？')" href="/Logout"
+                class="btn btn-danger btn-shadow btn-round has-icon has-icon-nofloat btn-block">
+                <i class="ion ion-help-buoy"></i>
+                <div>退出登录</div>
+            </a>
+        </div>
+    </aside>
+</div>

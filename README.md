@@ -13,3 +13,15 @@
 * public : 存放一些资源(image,css,icon,js)
 * data : 模拟的数据(需要导入到MongoDB内 ) => 比如 mongoimport -d sm(库的名称) -c students(集合的名称) data/student.txt
 
+<!-- <% for(item of data){ %>
+              <tr>
+                <td><%= item.sid %></td>
+                <td><%= item.name %></td>
+                <td><%= item.sex %></td>
+                <td><%= item.age %></td>
+                <td>
+                  <input type="button" value='删除' class="btn btn-warning del" data-id="<%= item.sid%>">
+                  <input type="button" value='修改' class="btn btn-info change" data-id="<%= item.sid%>">
+                </td>
+              </tr>
+              <% } %> -->
